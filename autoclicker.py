@@ -82,14 +82,14 @@ while True:
             (x, y, w, h) = (data['left'][i], data['top'][i], data['width'][i], data['height'][i])
             # print(x, y, w, h) # for debugging
             # adjust the position of where the cursor is going to click in the centre of the bbox
-            wloc = (x + w / 2)
+            xloc = (x + w / 2)
             yloc = (y + h / 2)
-            # print(wloc, yloc)
+            # print(xloc, yloc)
             # move the cursor to perform a click or anything else
             try:
-                pagi.moveTo(wloc, yloc, 0.3)
+                pagi.moveTo(xloc, yloc, 0.3)
                 pagi.leftClick()
-                pagi.moveTo(wloc, yloc - 276, 0.3)
+                pagi.moveTo(xloc, yloc - 276, 0.3)
                 pagi.leftClick()
                 # have this delay in the loop to prevent mouse lock
                 time.sleep(click_sleep_time)
